@@ -8,11 +8,11 @@ import android.view.Menu
 import android.view.MenuItem
 import nl.svdoetelaar.madlevel5task2.R
 
-class MainActivity : AppCompatActivity() {
+class GamesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_games)
         setSupportActionBar(findViewById(R.id.toolbar))
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.delete -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
