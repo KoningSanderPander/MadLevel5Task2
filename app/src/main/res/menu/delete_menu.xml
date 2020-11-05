@@ -2,10 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="nl.svdoetelaar.madlevel5task2.ui.GamesActivity">
+
     <item
         android:id="@+id/delete"
         android:icon="@drawable/ic_baseline_delete_24"
         android:orderInCategory="100"
-        app:showAsAction="always"
-        android:title="@string/delete" />
+        android:title="@string/delete"
+        app:showAsAction="always" />
+
 </menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gamesBacklogFragment">
+    <fragment
+        android:id="@+id/gamesBacklogFragment"
+        android:name="nl.svdoetelaar.madlevel5task2.ui.GamesBacklogFragment"
+        android:label="fragment_games_backlog_rv"
+        tools:layout="@layout/fragment_games_backlog_rv">
+    </fragment>
+</navigation>

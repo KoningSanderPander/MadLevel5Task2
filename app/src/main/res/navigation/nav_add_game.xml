@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_add_game"
+    app:startDestination="@id/addGameFragment">
+
+
+    <fragment
+        android:id="@+id/addGameFragment"
+        android:name="nl.svdoetelaar.madlevel5task2.ui.AddGameFragment"
+        android:label="fragment_add_game"
+        tools:layout="@layout/fragment_add_game">
+    </fragment>
+</navigation>

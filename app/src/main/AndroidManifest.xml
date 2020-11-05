@@ -5,13 +5,17 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MadLevel5Task2"
-        android:fullBackupContent="@xml/backup_descriptor"
         tools:ignore="AllowBackup">
+        <activity
+            android:name=".ui.AddGameActivity"
+            android:label="@string/title_activity_add_game"
+            android:theme="@style/Theme.MadLevel5Task2.NoActionBar"></activity>
         <activity
             android:name=".ui.GamesActivity"
             android:label="@string/app_name"

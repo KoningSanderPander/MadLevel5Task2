@@ -11,4 +11,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="delete">delete</string>
     <string name="add_item_fab">Add Titem FAB</string>
+    <string name="add_game">Add Game</string>
+    <string name="game_backlog">Game Backlog</string>
+    <string name="title_activity_add_game">AddGameActivity</string>
 </resources>
