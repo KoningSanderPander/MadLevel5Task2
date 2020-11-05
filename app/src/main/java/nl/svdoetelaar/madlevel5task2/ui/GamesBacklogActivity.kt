@@ -4,16 +4,15 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_games.*
 import nl.svdoetelaar.madlevel5task2.R
 
-class GamesActivity : AppCompatActivity() {
+class GamesBacklogActivity : AppCompatActivity() {
 
     var selectedMenu = R.menu.delete_menu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_games)
+        setContentView(R.layout.activity_games_backlog)
         setSupportActionBar(findViewById(R.id.toolbar))
 
     }
@@ -32,18 +31,5 @@ class GamesActivity : AppCompatActivity() {
             R.id.delete -> true
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    fun setToolbarWithBackButton() {
-
-    }
-
-    fun setToolbarWithoutBackButton() {
-        supportActionBar!!.setDisplayHomeAsUpEnabled(false)
-        supportActionBar!!.setHomeButtonEnabled(false)
-    }
-
-    fun setSupportActionBarTitle(title: String) {
-        supportActionBar?.title = title
     }
 }

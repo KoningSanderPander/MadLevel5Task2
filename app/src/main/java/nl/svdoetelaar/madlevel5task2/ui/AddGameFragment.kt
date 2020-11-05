@@ -1,14 +1,9 @@
 package nl.svdoetelaar.madlevel5task2.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.Button
-import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.activity_games.*
-import kotlinx.android.synthetic.main.activity_games.view.*
-import nl.svdoetelaar.madlevel5task2.R
 import nl.svdoetelaar.madlevel5task2.databinding.FragmentAddGameBinding
 
 /**
@@ -23,7 +18,6 @@ class AddGameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAddGameBinding.inflate(inflater, container, false)
-        (activity as GamesActivity).setToolbarWithBackButton()
         return binding.root
     }
 
@@ -31,19 +25,7 @@ class AddGameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fabAddGame.setOnClickListener {
-            (activity as GamesActivity).setToolbarWithoutBackButton()
-            findNavController().popBackStack()
+            startActivity(Intent(activity, GamesBacklogActivity::class.java))
         }
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        menu.setGroupVisible(id, false)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        (activity as GamesActivity).setSupportActionBarTitle(getString(R.string.add_game))
     }
 }

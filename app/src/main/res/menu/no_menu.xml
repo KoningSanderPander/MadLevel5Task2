@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
-    tools:context="nl.svdoetelaar.madlevel5task2.ui.GamesActivity">
+    tools:context="nl.svdoetelaar.madlevel5task2.ui.GamesBacklogActivity">
 
 </menu>
