@@ -5,14 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import nl.svdoetelaar.madlevel5task2.dao.BacklogGameDAO
+import nl.svdoetelaar.madlevel5task2.dao.BacklogGameDao
 import nl.svdoetelaar.madlevel5task2.model.BacklogGame
 
 @TypeConverters(Converter::class)
 @Database(entities = [BacklogGame::class], version = 1, exportSchema = false)
 abstract class BacklogGamesListRoomDatabase : RoomDatabase() {
 
-    abstract fun BacklogGameDao(): BacklogGameDAO
+    abstract fun BacklogGameDao(): BacklogGameDao
 
     companion object {
         private const val DATABASE_NAME = "BACKLOG_GAME_DATABASE"

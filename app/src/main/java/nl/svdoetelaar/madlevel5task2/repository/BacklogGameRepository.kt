@@ -2,13 +2,13 @@ package nl.svdoetelaar.madlevel5task2.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import nl.svdoetelaar.madlevel5task2.dao.BacklogGameDAO
+import nl.svdoetelaar.madlevel5task2.dao.BacklogGameDao
 import nl.svdoetelaar.madlevel5task2.database.BacklogGamesListRoomDatabase
 import nl.svdoetelaar.madlevel5task2.model.BacklogGame
 
 class BacklogGameRepository(context: Context) {
 
-    private val backlogGameDao: BacklogGameDAO
+    private val backlogGameDao: BacklogGameDao
 
     init {
         val database = BacklogGamesListRoomDatabase.getDatabase(context)
@@ -16,18 +16,18 @@ class BacklogGameRepository(context: Context) {
     }
 
     fun getAllBacklogGames(): LiveData<List<BacklogGame>> {
-        return backlogGameDao.getAllGames()
+        return backlogGameDao.getAllBacklogGames()
     }
 
-    fun insertGame(game: BacklogGame) {
-        backlogGameDao.insertGame(game)
+    fun insertBacklogGame(game: BacklogGame) {
+        backlogGameDao.insertBacklogGame(game)
     }
 
-    suspend fun deleteAllGames() {
-        backlogGameDao.deleteAllGames()
+    suspend fun deleteAllBacklogGames() {
+        backlogGameDao.deleteAllBacklogGames()
     }
 
-    fun deleteGame(game: BacklogGame) {
-        backlogGameDao.deleteGame(game)
+    fun deleteBacklogGame(game: BacklogGame) {
+        backlogGameDao.deleteBacklogGame(game)
     }
 }

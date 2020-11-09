@@ -8,17 +8,17 @@ import androidx.room.Query
 import nl.svdoetelaar.madlevel5task2.model.BacklogGame
 
 @Dao
-interface BacklogGameDAO {
+interface BacklogGameDao {
 
     @Query("SELECT * FROM BacklogGame")
-    fun getAllGames(): LiveData<List<BacklogGame>>
+    fun getAllBacklogGames(): LiveData<List<BacklogGame>>
 
     @Insert
-    fun insertGame(backlogGame: BacklogGame)
+    fun insertBacklogGame(backlogGame: BacklogGame)
 
     @Delete
-    fun deleteGame(backlogGame: BacklogGame)
+    fun deleteBacklogGame(backlogGame: BacklogGame)
 
     @Query("DELETE FROM BacklogGame")
-    suspend fun deleteAllGames()
+    suspend fun deleteAllBacklogGames()
 }

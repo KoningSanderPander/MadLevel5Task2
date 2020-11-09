@@ -20,7 +20,7 @@ class BacklogGameViewModel(application: Application) : AndroidViewModel(applicat
     fun addBacklogGame(game: BacklogGame) {
         mainScope.launch {
             withContext(Dispatchers.IO) {
-                backlogGameRepository.insertGame(game)
+                backlogGameRepository.insertBacklogGame(game)
             }
         }
     }
@@ -28,7 +28,7 @@ class BacklogGameViewModel(application: Application) : AndroidViewModel(applicat
     fun deleteGame(game: BacklogGame) {
         mainScope.launch {
             withContext(Dispatchers.IO) {
-                backlogGameRepository.deleteGame(game)
+                backlogGameRepository.deleteBacklogGame(game)
             }
         }
     }
@@ -36,7 +36,7 @@ class BacklogGameViewModel(application: Application) : AndroidViewModel(applicat
     fun deleteAllGames() {
         mainScope.launch {
             withContext(Dispatchers.IO) {
-                backlogGameRepository.deleteAllGames()
+                backlogGameRepository.deleteAllBacklogGames()
             }
         }
     }
