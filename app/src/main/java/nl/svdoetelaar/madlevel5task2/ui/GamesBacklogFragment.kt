@@ -35,6 +35,8 @@ class GamesBacklogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        backlogGameAdapter.notifyDataSetChanged()
+
         binding.fabAddGame.setOnClickListener {
             startActivity(Intent(activity, AddGameActivity::class.java))
         }
