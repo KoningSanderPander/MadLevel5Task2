@@ -15,7 +15,7 @@ class BacklogGameRepository(context: Context) {
         backlogGameDao = database!!.BacklogGameDao()
     }
 
-    fun getAllGames(): LiveData<List<BacklogGame>> {
+    fun getAllBacklogGames(): LiveData<List<BacklogGame>> {
         return backlogGameDao.getAllGames()
     }
 
