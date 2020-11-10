@@ -1,6 +1,7 @@
 package nl.svdoetelaar.madlevel5task2.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem

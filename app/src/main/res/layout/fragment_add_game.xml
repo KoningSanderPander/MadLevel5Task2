@@ -29,8 +29,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTitle"
                 android:layout_width="match_parent"
+                android:singleLine="true"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#00FFFFFF"
                 android:hint="@string/title" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,8 +50,9 @@
                 android:id="@+id/etPlatform"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#00FFFFFF"
                 android:hint="@string/platform" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#00FFFFFF"
                 android:hint="@string/day"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#00FFFFFF"
                 android:hint="@string/month"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#00FFFFFF"
                 android:hint="@string/year"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>

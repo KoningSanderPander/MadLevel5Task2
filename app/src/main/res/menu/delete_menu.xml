@@ -4,7 +4,7 @@
     tools:context="nl.svdoetelaar.madlevel5task2.ui.GamesBacklogActivity">
 
     <item
-        android:id="@+id/delete"
+        android:id="@+id/deleteAll"
         android:icon="@drawable/ic_baseline_delete_24"
         android:orderInCategory="100"
         android:title="@string/delete"

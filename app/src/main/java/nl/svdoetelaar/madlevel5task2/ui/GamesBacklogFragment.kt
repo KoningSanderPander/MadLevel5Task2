@@ -3,14 +3,15 @@ package nl.svdoetelaar.madlevel5task2.ui
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.*
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import nl.svdoetelaar.madlevel5task2.R
 import nl.svdoetelaar.madlevel5task2.databinding.FragmentGamesBacklogRvBinding
 import nl.svdoetelaar.madlevel5task2.model.BacklogGame
@@ -27,6 +28,11 @@ class GamesBacklogFragment : Fragment() {
     private val backlogGameAdapter = BacklogGameAdapter(backlogGames)
 
     private lateinit var binding: FragmentGamesBacklogRvBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,8 +55,7 @@ class GamesBacklogFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.delete -> {
-                Toast.makeText(requireContext(),"Delete show", Toast.LENGTH_SHORT).show()
+            R.id.deleteAll -> {
                 backlogGameViewModel.deleteAllGames()
                 backlogGameAdapter.notifyDataSetChanged()
                 true
@@ -94,12 +99,20 @@ class GamesBacklogFragment : Fragment() {
                 return false
             }
 
-            @RequiresApi(Build.VERSION_CODES.O)
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
-                val toBeRemoved = backlogGames[position]
+                val backlogGame = backlogGames[position]
+                val undoSnackBar = Snackbar.make(
+                    requireView(),
+                    getString(R.string.removed_one_game),
+                    Snackbar.LENGTH_SHORT
+                ).setAction(getString(R.string.undo), fun(_: View) {
+                    backlogGameViewModel.addBacklogGame(backlogGame)
+                })
 
-                backlogGameViewModel.deleteGame(toBeRemoved)
+                backlogGameViewModel.deleteGame(backlogGame)
+
+                undoSnackBar.show()
             }
 
         }

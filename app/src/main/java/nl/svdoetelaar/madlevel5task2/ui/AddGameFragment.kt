@@ -46,6 +46,16 @@ class AddGameFragment : Fragment() {
         val month = binding.etMonth.text.toString().toInt()
         val year = binding.etYear.text.toString().toInt()
 
+        if (title.isEmpty()) {
+            Snackbar.make(requireView(), "Enter a title", Snackbar.LENGTH_SHORT).show()
+            return
+        }
+
+        if (platform.isEmpty()) {
+            Snackbar.make(requireView(), "Enter a platform", Snackbar.LENGTH_SHORT).show()
+            return
+        }
+
         try {
             backlogGameViewModel.addBacklogGame(
                 BacklogGame(
