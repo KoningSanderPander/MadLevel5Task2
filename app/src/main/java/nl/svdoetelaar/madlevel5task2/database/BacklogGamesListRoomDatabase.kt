@@ -12,7 +12,7 @@ import nl.svdoetelaar.madlevel5task2.model.BacklogGame
 @Database(entities = [BacklogGame::class], version = 1, exportSchema = false)
 abstract class BacklogGamesListRoomDatabase : RoomDatabase() {
 
-    abstract fun BacklogGameDao(): BacklogGameDao
+    abstract fun backlogGameDao(): BacklogGameDao
 
     companion object {
         private const val DATABASE_NAME = "BACKLOG_GAME_DATABASE"

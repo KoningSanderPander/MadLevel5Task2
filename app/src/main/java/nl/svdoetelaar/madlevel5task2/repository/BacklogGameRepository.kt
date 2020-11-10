@@ -12,7 +12,7 @@ class BacklogGameRepository(context: Context) {
 
     init {
         val database = BacklogGamesListRoomDatabase.getDatabase(context)
-        backlogGameDao = database!!.BacklogGameDao()
+        backlogGameDao = database!!.backlogGameDao()
     }
 
     fun getAllBacklogGames(): LiveData<List<BacklogGame>> {

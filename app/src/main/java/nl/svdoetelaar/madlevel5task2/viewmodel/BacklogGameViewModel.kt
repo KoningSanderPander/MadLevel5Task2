@@ -15,7 +15,7 @@ class BacklogGameViewModel(application: Application) : AndroidViewModel(applicat
     private val mainScope = CoroutineScope(Dispatchers.Main)
     private val backlogGameRepository = BacklogGameRepository(application.applicationContext)
 
-    val backlogGameLiveData: LiveData<List<BacklogGame>> get() = backlogGameRepository.getAllBacklogGames()
+    val backlogGamesLiveData: LiveData<List<BacklogGame>> get() = backlogGameRepository.getAllBacklogGames()
 
     fun addBacklogGame(game: BacklogGame) {
         mainScope.launch {
